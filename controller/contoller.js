@@ -4,10 +4,9 @@ angular.module('ems')
 	$scope.doLogin=function(register){
 		var details = JSON.stringify(register);
 		
-		console.log(details+"kkkkkkkkkkkkkk")
+		console.log(details+"kkkkkkkkkkkkkksdfdafsasasadf")
 		$http.post('http://localhost:9000/users/login',details)
-		.then(function(res){
-			
+		.then(function(res){			
 			if(res){
 				console.log(res.data)
 				if(res.data.response=="adminsuccess"){
