@@ -1,0 +1,30 @@
+
+
+<div class="container" ng-init="getAllUsers()" ng-controller="getUserDetails" >
+  <span><h2>Users List</h2><a ng-href="#/createPublisher" ><h3>Add Publisher</h3></a></span>
+ 
+  <table class="table table-bordered" ng-controller="editUserDetails">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+		 <th>Edit</th>
+      </tr>
+    </thead>
+	
+     <tbody ng-repeat="x in usersValues">
+      <tr>
+        <td>{{x.fname}}</td>
+        <td>{{x.lname}}</td>
+        <td>{{x.email}}</td>
+		<td ng-click="editUser(x._id)">Edit</td>
+      </tr>
+      <tr>
+        
+    </tbody>  
+  </table>
+</div>
+
+
+
